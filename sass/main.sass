@@ -32,6 +32,7 @@ footer, header, hgroup, main, menu, nav, section
 
 body
     line-height: 1
+    color: #313131
 
 menu, ol, ul
     list-style: none
@@ -47,45 +48,260 @@ q:before, q:after
 table
     border-collapse: collapse
     border-spacing: 0
+a
+    text-decoration: none
+    color: inherit
+    border: none
 
 .container
-    max-width: 1170px
-    padding: 0 10px
+    max-width: 1200px
+    padding: 0 15px
     margin: 0 auto
 .preview
     .first-row
         display: flex
         justify-content: space-between
-        flex-direction: row
-        gap: 30px
-        .popular
-            max-width: 50%
-            .block-label
+        margin: 30px 0
+        @media (max-width:1200px)
+            display: block
+            width: 100%
+        .row-item
+            width: 48.719%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            @media (max-width:1200px)
+                margin-bottom: 30px
+            .item-label
                 display: inline-block
-                color: #212529
                 font-family: 'Open Sans', sans-serif
-                font-weight: 400
                 font-size: 12px
+                font-weight: 400
+                line-height: 1.2
                 padding: 6px 10px
-                border-radius: 3px
                 background-color: #FFE3B0
+                border-radius: 3px
                 margin-bottom: 5px
-            .block-title
+            .item-title
                 font-family: 'Rubik', sans-serif
                 font-size: 40px
+                font-weight: 400
                 line-height: 1.2
                 text-transform: uppercase
-                display: inline-block
-                ::after
-                    content: ""
-                    display: block
-                    background-image: url("../img/icons.png")
+                position: relative
+                margin-bottom: 12px
+                &::after
+                    content: ''
+                    position: absolute
+                    background-image: url(../img/icons.png)
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: cover
                     width: 160px
                     height: 44px
-                .title-bg-pink
+                    @media (max-width:768px)
+                        display: none
+                span
                     display: inline-block
-                    background-color: #FFCECE
+                    background-color: #ffcece
                     border-radius: 3px
-                    padding: 1px 8px
-                
+                    padding: 1px 5px
+            p
+                font-family: 'Open Sans', sans-serif
+                font-size: 16px
+                line-height: 1.4
+                font-weight: 400
+                margin-bottom: 30px
+            img
+                width: 100%
+                height: auto
+                object-fit: cover
+            .row-btn-link
+                display: flex
+                justify-content: center
+                height: 90px
+                width: 100%
+                align-items: center
+                background-color: #8ED6FF
+                border-radius: 8px
+                font-family: 'Rubik', sans-serif
+                font-size: 20px
+                font-weight: 400
+                margin-bottom: 2px
+        .row-item-right
+            border-radius: 8px
+        .row-item-left
+            @media (max-width:1200px)
+                display: flex
+                width: 100%
+        .mobile
+            display: none
+            @media (max-width:768px)
+                display: block
+                width: 100%
+        .desktop
+            @media (max-width:1200px)
+                display: block
+                width: 100%
+            @media (max-width:768px)
+                display: none
+    .second-row
+        display: flex
+        justify-content: space-between
+        margin-bottom: 30px
+        max-height: 464px
+        @media (max-width:1000px)
+                display: block
+                width: 100%
+        @media (max-width:768px)
+                display: none
+        .second-row-left,
+        .second-row-right
+            width: 48.719%
+            @media (max-width:1000px)
+                width: 100%
+            .column-left
+                width: 48%
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                @media (max-width:1000px)
+                    order: 2
+                .plaque-title-box
+                    position: sticky
+                    z-index: 2
+                .candies
+                    background-color: #CDC1FF
+                    position: relative
+                    min-height: 217px
+                    @media (max-width:1000px)
+                        margin-bottom: 30px
+                    img
+                        position: absolute
+                        right: 0
+                        bottom: 0
+                        opacity: 0.7
+                        z-index: 1
+                .bright
+                    background-color: #FFE3B0
+                    position: relative
+                    min-height: 217px
+                    img
+                        position: absolute
+                        right: 10px
+                        bottom: 0
+                        opacity: 0.7
+                        z-index: 1
+            .column-right
+                width: 48%
+                .plaque-title-box
+                    position: sticky
+                    z-index: 2
+            .block-link
+                display: block
+                padding: 30px
+                border-radius: 11px
+                overflow: hidden
+            .joy
+                background-color: #FFE3B0
+                display: flex
+                flex-direction: column
+                position: relative
+                @media (max-width:1000px)
+                    margin-bottom: 30px
+                .plaque-content-box
+                    display: flex
+                    justify-content: space-between
+                    .content-box-right
+                        position: absolute
+                        right: 0
+                        bottom: 0
+                        z-index: 1
+                        img
+                            opacity: 0.7
+                    .content-box-left
+                        max-width: 325px
+                        display: flex
+                        flex-wrap: wrap
+                        row-gap: 15px
+                        column-gap: 40px
+                        z-index: 5
+                        img
+                            object-fit: contain
+            .looks
+                background-color: #8ED6FF
+                position: relative
+                height: 100%
+                width: 100%
+                z-index: 2
 
+                .plaque-img
+                    position: absolute
+                    right: 0
+                    bottom: 0
+                    opacity: 0.7
+                    z-index: 1
+        .dflex
+            display: flex
+            justify-content: space-between 
+        .plaque-title-box
+            width: 100%
+            margin-bottom: 30px
+            .plaque-title
+                font-family: 'Rubik', sans-serif
+                font-size: 22px
+                font-weight: 400
+                line-height: 1.2
+                letter-spacing: 0.22px
+                text-transform: uppercase
+                position: relative
+                margin-bottom: 5px
+                &::after
+                    content: ''
+                    position: absolute
+                    background-image: url('../img/arrow.svg')
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    height: 15px
+                    width: 21px
+                    right: 0
+                    top: 50%
+                    transform: translateY(-50%)
+            .plaque-dexcription
+                font-family: 'Open Sans', sans-serif
+                font-size: 16px
+                font-weight: 300
+    .second-row-mobile
+        .mobile-nav-item
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 20px
+            border-radius: 10px
+            position: relative
+            padding: 20px
+            &::after
+                content: ''
+                position: absolute
+                background-image: url('../img/arrow.svg')
+                background-repeat: no-repeat
+                background-position: center
+                background-size: cover
+                width: 19px
+                height: 16px
+                right: 56px
+                top: 50%
+                transform: translateY(-50%)
+            .mobile-item-title
+                font-family: 'Rubik', sans-serif
+                font-weight: 18px
+                text-transform: uppercase
+                line-height: 1.2
+                font-weight: 400
+                margin-bottom: 4px
+            .mobile-item-description
+                font-family: 'Open sans', sans-serif
+                font-weight: 14px
+                line-height: 1.2
+                font-weight: 300
