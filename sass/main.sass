@@ -148,13 +148,13 @@ a
     .second-row
         display: flex
         justify-content: space-between
-        margin-bottom: 30px
-        max-height: 464px
+        margin-bottom: 50px
+        // max-height: 464px
         @media (max-width:1000px)
-                display: block
-                width: 100%
+            display: block
+            width: 100%
         @media (max-width:768px)
-                display: none
+            display: none
         .second-row-left,
         .second-row-right
             width: 48.719%
@@ -243,7 +243,7 @@ a
                     z-index: 1
         .dflex
             display: flex
-            justify-content: space-between 
+            justify-content: space-between
         .plaque-title-box
             width: 100%
             margin-bottom: 30px
@@ -275,7 +275,7 @@ a
     .second-row-mobile
         display: none
         @media (max-width:768px)
-                display: block
+            display: block
         .mobile-nav-item
             display: flex
             justify-content: space-between
@@ -323,3 +323,167 @@ a
             img
                 width: 100%
                 height: auto
+.philter
+    .philter-title
+        font-family: 'Rubik', sans-serif
+        font-size: 28px
+        font-weight: 400
+        text-transform: uppercase
+        padding-left: 50px
+        position: relative
+        margin-bottom: 20px
+        &::before
+            content: ''
+            position: absolute
+            background-image: url('../img/philter-title.svg')
+            width: 39px
+            height: 35px
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+    .philter-links
+        display: flex
+        justify-content: flex-start
+        flex-direction: row
+        flex-wrap: wrap
+        gap: 15px
+        margin-bottom: 50px
+        .philter-links-item
+            display: block
+            text-align: center
+            width: 85px
+            min-height: 90px
+            padding: 5px
+            transition: all .4s
+            &:hover
+                scale: 1.2
+            .link-item-title
+                margin-top: 15px
+                font-family: 'Rubik', sans-serif
+                font-size: 14px
+                font-weight: 400
+                line-heigth: 1.2
+                color: #99A2AA
+                &::active
+                    color: #212529
+    .philter-block
+        margin-bottom: 50px
+        .philter-block-title
+            font-family: 'Rubik', sans-serif
+            font-size: 28px
+            font-weight: 400
+            text-transform: uppercase
+            padding-left: 35px
+            position: relative
+            margin-bottom: 20px
+        .merch
+            &::before
+                content: ''
+                position: absolute
+                background-image: url('../img/merch-icon.svg')
+                background-position: center
+                background-repeat: no-repeat
+                background-size: cover
+                height: 35px
+                width: 25px
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+        .philter-block-wrapper
+            display: flex
+            justify-content: space-between
+            .philter-block-content
+                display: flex
+                border-radius: 11px
+                background-color: #FFE3B0
+                padding: 25px
+                min-height: 300px
+                width: 48.719%
+                position: relative
+                .block-content-left
+                    max-width: 320px
+                    display: flex
+                    justify-content: space-between
+                    flex-direction: column
+                    z-index: 2
+                    .block-content-subtitle
+                        font-family: 'Rubik', sans-serif
+                        font-size: 22px
+                        font-weight: 400
+                        text-transform: uppercase
+                        max-width: 277px
+                    .block-content-link
+                        font-family: 'Rubik', sans-serif
+                        font-size: 18px
+                        font-weight: 400
+                        line-height: 1.4
+                        padding-right: 20px
+                        position: relative
+                        &::after
+                            content: ''
+                            position: absolute
+                            background-image: url('../img/link-arrow.svg')
+                            background-position: center
+                            background-repeat: no-repeat
+                            background-size: cover
+                            height: 11px
+                            width: 16px
+                            right: 0
+                            top: 50%
+                            transform: translateY(-50%)
+                .block-content-right
+                    position: absolute
+                    right: 0
+                    bottom: 0
+                    z-index: 1
+                    img
+                        object-fit: cover
+                        object-position: center
+                        heigth: auto
+                        width: 100%
+            .philter-block-options
+                display: flex
+                justify-content: space-between
+                width: 48.719%
+                gap: 30px
+                .block-options-card
+                    display: flex
+                    flex-direction: column
+                    text-align: center
+                    border-radius: 11px
+                    width: 31%
+                    padding: 9px
+                    border: 1px solid rgba(255, 206, 206, 0.30)
+                    position: relative
+                    .trending
+                        &::before
+                            content: ''
+                            position: absolute
+                            background-image: url('../img/link-arrow.svg')
+                            background-position: center
+                            background-repeat: no-repeat
+                            background-size: cover
+                .card-head
+                    text-align: center
+                    text-transform: uppercase
+                    font-family: 'Rubik', sans-serif
+                    font-size: 16px
+                    font-weight: 400
+                    text-transform: uppercase
+                    margin-bottom: 25px
+                .card-feet
+                    text-align: left
+                    margin-top: auto
+                    margin-bottom: 0
+                    .card-description
+                        font-family: 'Rubik', sans-serif
+                        font-size: 12px
+                        font-weight: 300
+                        line-height: 1.2
+                        color: #212529
+                        margin-bottom: 5px
+                    .card-price
+                        font-family: 'Rubik', sans-serif
+                        font-size: 22px
+                        font-weight: 400
+                        line-height: 1
