@@ -273,6 +273,9 @@ a
                 font-size: 16px
                 font-weight: 300
     .second-row-mobile
+        display: none
+        @media (max-width:768px)
+                display: block
         .mobile-nav-item
             display: flex
             justify-content: space-between
@@ -290,7 +293,7 @@ a
                 background-size: cover
                 width: 19px
                 height: 16px
-                right: 56px
+                right: 25px
                 top: 50%
                 transform: translateY(-50%)
             .mobile-item-title
@@ -302,6 +305,21 @@ a
                 margin-bottom: 4px
             .mobile-item-description
                 font-family: 'Open sans', sans-serif
-                font-weight: 14px
+                font-size: 14px
                 line-height: 1.2
                 font-weight: 300
+        .mob-joy
+            background-color: #FFE3B0
+        .mob-candies
+            background-color: #CDC1FF
+        .mob-bright
+            background-color: #FFE3B0
+        .mob-looks
+            background-color: #8ED6FF
+        .mobile-item-content
+            width: 70%
+        .mobile-item-img
+            max-width: 85px
+            img
+                width: 100%
+                height: auto
