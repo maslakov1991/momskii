@@ -392,6 +392,8 @@ a
         .philter-block-wrapper
             display: flex
             justify-content: space-between
+            @media (max-width:1000px)
+                display: block
             .philter-block-content
                 display: flex
                 border-radius: 11px
@@ -400,6 +402,9 @@ a
                 min-height: 300px
                 width: 48.719%
                 position: relative
+                @media (max-width:1000px)
+                    width: 100%
+                    margin-bottom: 30px
                 .block-content-left
                     max-width: 320px
                     display: flex
@@ -446,23 +451,15 @@ a
                 justify-content: space-between
                 width: 48.719%
                 gap: 30px
+                @media (max-width:1000px)
+                    width: 100%
                 .block-options-card
                     display: flex
                     flex-direction: column
                     text-align: center
                     border-radius: 11px
                     width: 31%
-                    padding: 9px
                     border: 1px solid rgba(255, 206, 206, 0.30)
-                    position: relative
-                    .trending
-                        &::before
-                            content: ''
-                            position: absolute
-                            background-image: url('../img/link-arrow.svg')
-                            background-position: center
-                            background-repeat: no-repeat
-                            background-size: cover
                 .card-head
                     text-align: center
                     text-transform: uppercase
@@ -471,10 +468,91 @@ a
                     font-weight: 400
                     text-transform: uppercase
                     margin-bottom: 25px
+                    padding: 9px 0
+                    border-top-right-radius: 11px
+                    border-top-left-radius: 11px
+                .trending
+                    position: relative
+                    background: #CDC1FF
+                    &::before
+                        content: ''
+                        position: absolute
+                        background-image: url('../img/star-left.svg')
+                        background-position: center
+                        background-repeat: no-repeat
+                        background-size: cover
+                        width: 39px
+                        height: 39px
+                        left: -20px
+                        top: -20px
+                    &::after
+                        content: ''
+                        position: absolute
+                        background-image: url('../img/star-right.svg')
+                        background-position: center
+                        background-repeat: no-repeat
+                        background-size: cover
+                        width: 28px
+                        height: 28px
+                        right: -13px
+                        top: -8px
+                .hot
+                    position: relative
+                    background: #FFA98E
+                    &::before
+                        content: ''
+                        position: absolute
+                        background-image: url('../img/hot-left.svg')
+                        background-position: center
+                        background-repeat: no-repeat
+                        background-size: cover
+                        width: 22px
+                        height: 35px
+                        left: 15px
+                        top: -25px
+                    &::after
+                        content: ''
+                        position: absolute
+                        background-image: url('../img/hot-right.svg')
+                        background-position: center
+                        background-repeat: no-repeat
+                        background-size: cover
+                        width: 22px
+                        height: 35px
+                        right: 15px
+                        top: -25px
+                .new
+                    position: relative
+                    background: #FFE3B0
+                    &::before
+                        content: ''
+                        position: absolute
+                        background-image: url('../img/new.svg')
+                        background-position: left
+                        background-size: cover
+                        width: 32px
+                        height: 12px
+                        left: 10px
+                        top: -12px
+                    &::after
+                        content: ''
+                        position: absolute
+                        background-image: url('../img/new.svg')
+                        background-position: right
+                        background-size: cover
+                        width: 32px
+                        height: 12px
+                        right: 10px
+                        top: -12px
+                .card-image-wrapper
+                    img
+                        width: 100%
+                        object-fit: cover
                 .card-feet
                     text-align: left
                     margin-top: auto
                     margin-bottom: 0
+                    padding: 5px 9px 9px 9px
                     .card-description
                         font-family: 'Rubik', sans-serif
                         font-size: 12px
@@ -487,3 +565,15 @@ a
                         font-size: 22px
                         font-weight: 400
                         line-height: 1
+                        position: relative
+                        &::after
+                            content: ''
+                            position: absolute
+                            background-image: url('../img/arrow-price.svg')
+                            background-position: right
+                            background-size: cover
+                            width: 21px
+                            height: 15px
+                            right: 0
+                            top: 50%
+                            transform: translateY(-50%)
