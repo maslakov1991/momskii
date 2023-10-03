@@ -1,27 +1,48 @@
-const links = document.querySelectorAll('.philter-links-item'); //Получаем все кнопки
+const links = document.querySelector(".links");
+const items = document.querySelectorAll(".blocks-item");
+const listItems = document.querySelectorAll(".links-item");
 
-links.forEach((link) => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        let linkId = link.getAttribute('data-id');
-        // console.log(linkId);
+listItems.forEach((li) => {
+  let ourLi = li;
 
-        const items = document.querySelectorAll('.philter-block');
+  li.addEventListener("click", () => {
+    let ourLiId = ourLi.getAttribute("data-id");
+    console.log(ourLiId);
 
-        items.forEach((item) => {
-            let categoryId = item.getAttribute('data-category');
-            // catArray.push(categoryId);
+    if (ourLi.classList.contains("links-item")) {
+      listItems.forEach((listItem) => listItem.classList.remove("active"));
+      ourLi.classList.add("active");
+    }
 
-            if (linkId === categoryId) {
-                item.style.display = "none";
-                
-            } else if (linkId != categoryId) {
-                console.log("no work");
-            }
-        })
-
-        
+    switch (ourLiId) {
+      case "all":
+        getItems("blocks-item");
+        break;
+      case "books":
+        getItems(ourLiId);
+        break;
+      case "gadgets":
+        getItems(ourLiId);
+        break;
+      case "toys":
+        getItems(ourLiId);
+        break;
+    }
+  });
+  function getItems(className) {
+    items.forEach((item) => {
+      if (item.classList.contains(className)) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
     });
+  }
 });
 
-// console.log(catArray);
+$(function () {
+  $('.slider').slick({
+      arrows: false,
+      slidesToShow: 3
+  });
+});

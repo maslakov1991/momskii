@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+ul,
+li{
+    list-style: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.links-item{;
+    width: 75px;
+}
+
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.active{
+    color: #ffffff;
+    background: #000000;
+}
+
+.blocks{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    gap: 30px;
+}
+
+.blocks-item{
+    width: 23%;
+    height: 100px;
+}
+
+.green{
+    background: green;
+}
+.red{
+    background: red;
+}
+.blue{
+    background: blue;
+}
